@@ -1,0 +1,36 @@
+<html xmlns="http://www.w3.org/1999/xhtml" data-reactroot=""><head><meta charSet="utf-8"/><title>2016-03-06</title><link rel="stylesheet" type="text/css" href="../css/normalize.css"/><link rel="stylesheet" type="text/css" href="../css/markdown.css"/><link rel="stylesheet" type="text/css" href="../css/customer.css"/><link rel="stylesheet" type="text/css" href="../css/bootstrap.css"/></head><body><div class="container"><div class="mblog-container"><div class="card m-panel card9 weibo-member card-vip"><div class="card-wrap"><div class="card-main"><header class="weibo-top m-box m-avatar-box"><a class="m-img-box"><div class="duokan-image-single"><img src="../image/656d6080324bd0a3f9f9dd9e8b7d1bdb_／orj480／538658aejw1e8qgp5bmzyj2050050aa8.jpg"/></div><i class="m-icon m-icon-goldv-static"></i></a><div class="m-box-col m-box-dir m-box-center"><div class="m-text-box"><a><h3 class="m-text-cut">Ada李力<!-- --> <i class="m-icon m-icon-vipl7"></i></h3></a><h4 class="m-text-cut"><span class="time">2016-03-06</span></h4></div></div></header><article class="weibo-main"><div class="weibo-og"><div class="weibo-text">之前的创业项目也是类似思路。</div></div><div class="weibo-img-list-container"><div class="weibo-media-wraps weibo-media media-b"><ul class="m-auto-list"></ul></div></div><div class="weibo-article-container"></div><div class="weibo-rp"><div class="weibo-text"><span><a href="https://m.weibo.cn/u/1088413295?uid=1088413295&amp;luicode=10000011&amp;lfid=2304131401313454_-_WEIBO_SECOND_PROFILE_WEIBO">@<!-- -->Easy</a>:</span><div>之前做JobDeer时，我们的整个技术团队大部分时间只有一个人，最多时也就两个工程师。除了功能上节制，技术栈方案的选择也有很大的原因。最近新技术又起来了不少，我也更新一下技术栈方案，和大家分享下。<span class="url-icon"><div class="duokan-image-single"><img src="../image/b03ed3e9af39f8bf388db76a5c7cb350_／m／emoticon／icon／default／d_hehe-0be7e6251f.png" style="width:1em; height:1em;"/></div></span>《（可能是）最低成本的创业公司技术栈方案》 <a data-url="http://t.cn/RGQhbRG" href="http://weibo.com/ttarticle/p/show?id=2309403950016476635122" data-hide=""><span class='url-icon'><div class="duokan-image-single"><img src="../image/3b0cd48a4d1146862594012275da45d4_15／09／25／3／timeline_card_small_article_default.png"/></div></span><span class="surl-text">（可能是）最低成本的创业公司技术栈方案</span></a> </div></div><div class="weibo-img-list-container"><div class="weibo-media-wraps weibo-media media-b"><ul class="m-auto-list"></ul></div></div><div class="weibo-article-container"><div class="WB_artical"><div class="article-split-line"></div><div class="main_toppic"><div class="picbox"><div class="duokan-image-single"><img src="../image/4ce963e98045d7692d9020c813f1119c_.378.1000.562／40dfde6fjw1f1n18b3ek0j20iq0gfta0.jpg"/></div></div></div><div class="main_editor " node-type="articleContent"><div class="title" node-type="articleTitle">（可能是）最低成本的创业公司技术栈方案</div><div class="art-line"></div><div class="WB_editor_iframe_new" node-type="contentBody"><div class="article-content"><p>注：本文主要针对以数据展现查询为主的常规业务型的公司，不适用于非常规界面的项目，如游戏、视频工具等。</p>
+<p>之前做JobDeer时，我们的整个技术团队大部分时间只有一个人，最多时也就两个工程师，一直运作得不错。除了功能上的节制，技术栈方案的选择也有很大的原因。最近新技术又起来了不少，我也更新一下之前用到的技术栈方案，这里和大家分享下。</p>
+<h1>初创期：PHP + Responsive Web</h1>
+<p>初创期是一个业务需求猛烈变动的时期，在这个阶段，任何非业务逻辑相关的开发都是极大的<del>犯罪</del>浪费。所以我个人觉得这时候最佳的方案就是可以自动适配电脑和手机的Web全平台方案。</p>
+<p>这点大部分人都知道，但其实要把开发时间和成本压到最低，有很多技巧，这里给一个思路：</p>
+<h2>依托微信做账号系统</h2>
+<p>首先，直接使用微信作为用户体系（微博更适合用来分享、可能的话预存下手机号，以后做自有用户激活用）。</p>
+<p>这样有几个好处：</p>
+<ul>
+<li>不用做用户注册、用户找回密码这种和业务无关的流程 </li>
+<li>直接就具备了移动端一键支付的能力</li>
+<li>PC上可以直接微信扫码登入</li>
+</ul>
+<h2>简洁的卡片化设计同时兼容大小屏</h2>
+<p>然后，全站页面通过Responsive设计，同时兼容 PC、手机浏览器、微信内嵌浏览器。</p>
+<p>为了达到这个目标，PC端的设计要简单，尽量卡片化。微信内嵌时的导航、分享都和手机浏览器不同，需要识别设备做优化。虽然这样在产品设计时会比较慢点，但做好之后整个产品结构会非常统一，流程会非常清晰。顺便提下，原型工具Axure RP7是直接支持Responsive原型的，很好用。</p>
+<h2>保留接口，Web前后端分离</h2>
+<p>最后，Web框架的选型上，React优先；Vue、Angular其次；最低也建议要保持接口和前端代码的分离。</p>
+<p>就是说，PHP最好只用来构建Rest接口，不要渲染页面，全部页面全部用JS来渲染。你要问写接口用Go和NodeJS行不行，当然行，不过我觉得能完成同等工作的人里边，PHP的最容易招到、也相对便宜。</p>
+<p>这部分有一个安全大坑。某些PHP程序员并不熟悉写纯接口，经常把敏感字段返回了。要多盯下。</p>
+<p>初创期建议不要过早启动客户端方案，除非对客户端的原生功能非常依赖。原因比较现实，那就是客户端团队是非常贵的，光是一个iOS一个Android就三五万一个月了。而更贵的是APP的安装成本，如果从Web导流到微信公众号的转化率是60%，那么到APP的转化通常在20%以下。</p>
+<h1>进阶期：ReactJS + React Native</h1>
+<p>当业务定型以后，你就会发现嵌到别人APP里边还是很憋屈的，而且微信的JS SDK的BUG经常让人无语。另一方面，对融完了一两轮的公司来说，过分依赖微信还是有风险的。需要把各个外围平台上的用户聚集到一个完全属于自己的地方，这时候我们就可以开始做APP了。</p>
+<p>坦率的讲，要做一个90分以上体验的APP，原生方案是最靠谱的。但如果你的APP只是列表分页之类的简单结构，Hybrid（混合APP）看起来会是一个更好的方案。</p>
+<p>之前我们的Hybrid方案用的是内嵌Html的PhoneGap+ionic，但我并不推荐大家去用这东西。</p>
+<p>两个原因，一是在一些比较老机器上，会出现内存不足这种没法绕过的问题，导致经常性崩溃；二是JS在各个设备上的兼容性会让你调到想杀人，别问我怎么知道的。</p>
+<p>所以这里推荐的是ReactNative的JS渲染原生控件的方案。虽然里边标签和CSS的语法都很奇葩，但是人家不卡啊，但是人家不卡啊，但是人家不卡啊。</p>
+<p>加上如果之前的前端用的本身就是React的话，这时候可以重用不少业务逻辑。现在ReactNative已经可以同时支持iOS和Android，LeanCloud也对其做了 <a href="https://weibo.cn/sinaurl?u=http%3A%2F%2Fget.ftqq.com%2F8375.get">不少支持</a> ，但在Android上的推送依然需要自己来实现。</p>
+<p>之后可能依然会需要iOS和Android的人来开发原生组件，以实现业务逻辑特有的功能。但由于开发的工作量一般较小、而且可以通过组件机制去耦合，所以非常适合直接外包出去—— 好像又能省不少钱。</p>
+<h1>小结</h1>
+<p>粗略估计，这个方案应该足够支撑大部分的APP运营到百万用户了。ReactNative这块我只测试了一些Demo，但坑国内大公司已经踩了不少，不放心的同学可以抓来看看。</p>
+<p>最后再说一边，初创期方案里边，从技术角度看，PHP换成别的语言是可行的，但用PHP人力成本更低。</p>
+<p>当然你能找到一个ReactJS和NodeJS都非常资深的人，那么恭喜你一两年都都不用担心技术方问题了。所以NB点的前端动不动年薪60~80万，那是有道理的……</p>
+<p><div class="duokan-image-single"><img src="../image/028ad9be2f6dce4cb26b1ca715745c4a_／large／40dfde6fjw1f1n13t8c3ij208c06y3z0.jpg" alt="SDK.cn"/></div></p>
+<p><a href="https://weibo.cn/sinaurl?u=https%3A%2F%2Fwww.sdk.cn%2Fdatas%2Ftrending%3Ffr%3DGET">SDK.cn - 根据最新最热排名趋势选择最佳工具和服务</a></p>
+<p><font color="#aaaaaa">转载必须保留来源和以上赞助商广告。</font>​​​</p></div><div class="DCI_v2 clearfix"></div></div></div></div></div></div></article><footer class="m-ctrl-box m-box-center-a"><div class="m-diy-btn m-box-col m-box-center m-box-center-a m-box-center-retweet"><i class="m-font m-font-forward lite-iconf lite-iconf-report"></i><h4>6</h4></div><span class="m-line-gradient"></span><div class="m-diy-btn m-box-col m-box-center m-box-center-a m-box-center-comment"><i class="m-font m-font-comment  lite-iconf lite-iconf-comments"></i><h4>0</h4></div><span class="m-line-gradient"></span><div class="m-diy-btn m-box-col m-box-center m-box-center-a m-box-center-agree"><i class="m-icon m-icon-like lite-iconf lite-iconf-like"></i><h4>0</h4></div></footer></div></div></div><hr/></div></div></body></html>
